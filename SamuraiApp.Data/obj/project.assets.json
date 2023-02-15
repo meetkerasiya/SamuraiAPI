@@ -1159,6 +1159,9 @@
       "SamuraiApp.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
         "compile": {
           "bin/placeholder/SamuraiApp.Domain.dll": {}
         },
@@ -3519,7 +3522,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
       "SamuraiApp.Domain >= 1.0.0"
@@ -3531,11 +3533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Meet  Kerasiya\\source\\repos\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
       "projectName": "SamuraiApp.Data",
-      "projectPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
+      "projectPath": "C:\\Users\\Meet  Kerasiya\\source\\repos\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
       "packagesPath": "C:\\Users\\Meet  Kerasiya\\.nuget\\packages\\",
-      "outputPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\obj\\",
+      "outputPath": "C:\\Users\\Meet  Kerasiya\\source\\repos\\SamuraiAPI\\SamuraiApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Meet  Kerasiya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3552,8 +3554,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj": {
-              "projectPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj"
+            "C:\\Users\\Meet  Kerasiya\\source\\repos\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\Meet  Kerasiya\\source\\repos\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj"
             }
           }
         }
@@ -3568,12 +3570,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[7.0.3, )"
-          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.3, )"

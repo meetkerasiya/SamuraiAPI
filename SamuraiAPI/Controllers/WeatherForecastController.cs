@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SamuraiApp.Data;
+using SamuraiApp.Domain;
 
 namespace SamuraiAPI.Controllers
 {
@@ -12,22 +15,27 @@ namespace SamuraiAPI.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        private readonly SamuraiContext _context;
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,SamuraiContext context)
         {
             _logger = logger;
+            _context = context;
         }
-
+        
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<ActionResult<IEnumerable<Samurai>>> GetSamurais()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return await _context.Samurais.ToListAsync();
         }
+        //public IEnumerable<WeatherForecast> Get()
+        //{
+        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = Random.Shared.Next(-20, 55),
+        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+        //    })
+        //    .ToArray();
+        //}
     }
 }

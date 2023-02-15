@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SamuraiApp.Data;
 
+#nullable disable
+
 namespace SamuraiApp.Data.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
@@ -15,21 +17,24 @@ namespace SamuraiApp.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "7.0.2")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("SamuraiApp.Domain.Battle", b =>
                 {
                     b.Property<int>("BattleId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BattleId"));
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
@@ -64,10 +69,12 @@ namespace SamuraiApp.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SamuraiId")
@@ -78,20 +85,22 @@ namespace SamuraiApp.Data.Migrations
                     b.HasIndex("SamuraiId")
                         .IsUnique();
 
-                    b.ToTable("Horses");
+                    b.ToTable("Horse");
                 });
 
             modelBuilder.Entity("SamuraiApp.Domain.Quote", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("SamuraiId")
                         .HasColumnType("int");
 
                     b.Property<string>("Text")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -105,29 +114,17 @@ namespace SamuraiApp.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Samurais");
-                });
-
-            modelBuilder.Entity("SamuraiApp.Domain.SamuraiBattleStat", b =>
-                {
-                    b.Property<string>("EarliestBattle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("NumberOfBattles")
-                        .HasColumnType("int");
-
-                    b.ToView("SamuraiBattleStats");
                 });
 
             modelBuilder.Entity("SamuraiApp.Domain.BattleSamurai", b =>
@@ -167,7 +164,8 @@ namespace SamuraiApp.Data.Migrations
 
             modelBuilder.Entity("SamuraiApp.Domain.Samurai", b =>
                 {
-                    b.Navigation("Horse");
+                    b.Navigation("Horse")
+                        .IsRequired();
 
                     b.Navigation("Quotes");
                 });
