@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "3I3Mc8caEE1hZK6DwDcVT92wrdm1UJgvR0X9S1XI3cyN719vC/Kzyg2rQLzpX6OacKXSBvCmgXI6EoINujUUcQ==",
+  "success": false,
+  "projectFilePath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.UI\\SamuraiApp.UI.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
+      "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Meet  Kerasiya\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.UI\\SamuraiApp.UI.csproj",
+      "projectName": "SamuraiApp.UI",
+      "projectPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.UI\\SamuraiApp.UI.csproj",
+      "packagesPath": "C:\\Users\\Meet  Kerasiya\\.nuget\\packages\\",
+      "outputPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.UI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Meet  Kerasiya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj": {
+              "projectPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj"
+            },
+            "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj": {
+              "projectPath": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Data\\SamuraiApp.Data.csproj",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\training\\15 feb\\SamuraiAPI\\SamuraiApp.Domain\\SamuraiApp.Domain.csproj",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
